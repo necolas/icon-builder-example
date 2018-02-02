@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@acme/icons",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "NODE_ENV=production node scripts/build.js",
+    "release": "NODE_ENV=production node scripts/release.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-react-native-web": "^0.3.3",
+    "babel-preset-react-native": "^4.0.0",
+    "del": "^3.0.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4",
+    "svgo": "^1.0.4"
+  }
+}
