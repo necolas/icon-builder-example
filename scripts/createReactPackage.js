@@ -28,27 +28,11 @@ export default ${componentName};
  * Template: createIconComponent
  */
 const getCreateIconSource = () => getTransformedSourceCode(`
-import { createElement, StyleSheet } from 'react-native-web';
 import React from 'react';
-const createIconComponent = ({ content, height, width }) =>
-  (props) => createElement('svg', {
-    ...props,
-    style: StyleSheet.compose(styles.root, props.style),
-    viewBox: \`0 0 \${width} \${height}\`
-  },
-  content);
 
-const styles = StyleSheet.create({
-  root: {
-    display: 'inline-block',
-    fill: 'currentcolor',
-    height: '1.25em',
-    maxWidth: '100%',
-    position: 'relative',
-    userSelect: 'none',
-    textAlignVertical: 'text-bottom'
-  }
-});
+const createIconComponent = ({ content, height='70', width='70' }) => (
+  props => <svg {...props} className={\`svg-icon \${props.className !== '' ? props.className : ''}\`} viewBox={\`0 0 \${width} \${height}\`}>{content}</svg>
+)
 
 export default createIconComponent;
 `);

@@ -3,8 +3,8 @@
   "name": "@acme/icons",
   "version": "1.0.0",
   "scripts": {
-    "build": "NODE_ENV=production node scripts/build.js",
-    "release": "NODE_ENV=production node scripts/release.js"
+    "build": "set NODE_ENV=production && node scripts/build.js",
+    "release": "set NODE_ENV=production && node scripts/release.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
